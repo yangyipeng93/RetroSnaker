@@ -1,4 +1,5 @@
-//记分棒
+
+//记分
 export default class ScorePanel {
 
     score: number = 0;
@@ -18,20 +19,16 @@ export default class ScorePanel {
     }
 
     addScore() {
+        console.log('addScore');
         this.scoreEle.innerText = ++this.score + '';
         if (this.score % this.upScore === 0) {
-
+            this.levelUp();
         }
     }
 
     levelUp() {
-        if (this.level <= this.maxLevel) {
+        if (this.level < this.maxLevel) {
             this.levelEle.innerText = ++this.level + '';
         }
     }
 }
-
-// const scorePanel=new ScorePanel();
-// for (let i = 0; i <100; i++) {
-//     scorePanel.addScore();
-// }
