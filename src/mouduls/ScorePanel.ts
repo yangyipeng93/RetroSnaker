@@ -11,7 +11,7 @@ export default class ScorePanel {
     maxLevel: number;
     upScore: number;
 
-    constructor(maxLevel: number = 10, upScore: number = 10) {
+    constructor(maxLevel: number = 10, upScore: number = 1) {
         this.scoreEle = document.getElementById('score')!;
         this.levelEle = document.getElementById('level')!;
         this.maxLevel = maxLevel;
